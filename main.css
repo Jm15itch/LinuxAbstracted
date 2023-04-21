@@ -1,0 +1,115 @@
+body {
+    background-color: RGB(15, 15, 15);
+    margin: 0;
+}
+
+* {
+    font-family: arial;
+    color: RGB(230, 230, 230);
+}
+
+html, body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: black;
+    padding: 10px;
+    border-radius:4px;
+}
+
+.MainContent {
+    background-color: RGB(25, 25, 25);
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    box-shadow: 0px 0px 25px 25px RGB(20, 20, 20);
+    color: RGB(230, 230, 230);
+    min-height:100%;
+}
+
+.TopBar {
+    height:4.5rem;
+    left:5%;
+    right:5%;
+    top:0;
+    position:fixed;
+    z-index: 2;
+}
+
+.UpperBar {
+    width:100%;
+    height:2.5rem;
+    background-color: RGB(60, 60, 60);
+}
+
+.UpperBar h2 {
+    margin:0;
+    padding:0;
+    padding-left: 15px;
+    color: white;
+    font-family: arial;
+    padding-top:0.3125rem;
+    width:13rem;
+}
+
+.UpperBar h2:hover {
+    text-shadow: 0px 0px 7px RGB(100, 100, 255);
+    cursor: pointer;
+}
+
+.LowerBar {
+    width:100%;
+    height:2rem;
+    background-color: RGB(20, 20, 20);
+}
+
+.HeaderLabel {
+    margin:0;
+    padding:0;
+    color: RGB(80, 80, 250);
+    font-family: arial;
+    padding-top:0.3125rem;
+    width: 7rem;
+    height: 1.7rem;
+    text-align: center;
+    margin-left: 3px;
+    margin-right: 3px;
+    float: left;
+}
+
+.HeaderLabel:hover {
+    color: black;
+    background-color: RGB(80, 80, 250);
+    cursor: pointer
+}
+
+.HeaderLabelGit {
+    margin:0;
+    padding:0;
+    color: RGB(80, 80, 250);
+    font-family: arial;
+    padding-top:0.3125rem;
+    width: 7rem;
+    height: 1.7rem;
+    text-align: center;
+    margin-left: 3px;
+    margin-right: 3px;
+    float: left;
+}
+
+.HeaderLabelGit:hover {
+    color: black;
+    background-color: RGB(80, 250, 90);
+    cursor: pointer
+}
+
+.ColorBar {
+    width: 100%;
+    height:0.2rem;
+    background-color: RGB(80, 80, 250);
+}

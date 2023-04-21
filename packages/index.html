@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../main.css">
+    </head>
+    <body>
+        <div class="TopBar">
+                <div class="UpperBar">
+                    <a href="../index.html"><h2>Linux Abstracted</h2></a>
+                </div>
+                <div class="LowerBar">
+                    <h3 class="HeaderLabelGit" style="margin-left:15px;">Github</h3>
+                    <a href="#"><h3 class="HeaderLabel">Translator</h3></a>
+                </div>
+                <div class="ColorBar"></div>
+        </div>
+        <div class="MainContent">
+            <h1 style="margin-bottom:4rem;">Oh! You've found this secret easter egg!</h1>
+            <center>
+                <h2 class="whitetext">Package Manager Translator v0.1</h2>
+                <table style="width:40%; margin-top:4rem;">
+                    <tr>
+                        <th>
+                            <input onchange="UpdateSelection()" name="PackageManagerSelection" style="float:left;" type="radio" id="apt_radiobutton">
+                            <label style="float:left;" for="apt_radiobutton">apt</label><br><br>
+                            <input onchange="UpdateSelection()" style="float:left;" name="PackageManagerSelection" type="radio" id="pacman_radiobutton">
+                            <label style="float:left;" for="pacman_radiobutton">pacman</label>
+                        </th>
+                        <th>
+                            <textarea id="PackageData" onchange="UpdateSelection()" style="float:right; background-color: black;" rows="10" cols="20"></textarea>
+                            <h3 style="float: right; margin-right:3rem;">Input packages here:</h3>
+                        </th>
+                    </tr>
+                </table>
+                    <div style="margin-top:5rem; background-color: RGB(10, 10, 10); padding:10px; font-size:10px; width:80%;"><h3 id="Output" style="vertical-align: middle;">https://example.com</h3></div>
+                    <br><button style="width:40%;">Copy the link</button><button onclick="window.open(document.getElementById('Output').innerHTML, '_blank').focus();" style="width:40%;">Open in new tab</button>
+            </center>
+<script>
+
+function UpdateSelection() {
+    var PackageManager = "apt";
+
+    if (document.getElementById("pacman_radiobutton").checked) {
+        PackageManager = "pacman";
+    }
+
+    document.getElementById("Output").innerHTML = "http://" + window.location.host + "/packages/translate.php?PackageManager=" + PackageManager + "&Packages=" + encodeURIComponent(document.getElementById("PackageData").value);
+}
+
+</script>
+        </div>
+    </body>
+</html>
